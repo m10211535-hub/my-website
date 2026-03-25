@@ -1,0 +1,390 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'YuMincho', 'Yu Mincho', serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #2A2118;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* header */
+.wrapper {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#header .logo a {
+    display: block;
+}
+
+#header .menu{
+    display: flex;
+    align-items: center;
+}
+
+#header .menu li {
+    margin-left: 50px;
+    font-size: 18px;
+}
+
+/* mainvisual */
+
+.mainvisual {
+    max-width: 100%;
+    margin-bottom: 140px;
+}
+
+.mainvisual img {
+    width: 100%;
+}
+
+/* about */
+
+#about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+#about .detail {
+    padding-left: 80px;
+}
+
+#about .detail .about-en {
+    font-size: 30px;
+    color: #8A8078;
+    margin-bottom: 10px;
+}
+
+#about .detail .about-title {
+    color: #2A2118;
+    position: relative;
+}
+
+#about .detail .about-title::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: #C49A6C;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+}
+
+#about .detail .about-description {
+    margin-top: 50px;
+    color: #8A8078;
+}
+
+/* menu */
+
+#menu {
+    background-color: #FAF7F2;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+#menu .menu-en {
+    font-size: 30px;
+    color: #8A8078;
+    margin-bottom: 10px;
+}
+
+#menu .menu-title {
+    color: #2A2118;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+#menu .menu-title::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: #C49A6C;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+}
+
+/* 親要素：4列グリッド */
+.layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* 画像エリア */
+.layout .menu .menu-img {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.layout .menu .menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* テキストエリア */
+.layout .menu .menu-card {
+    margin-top: 10px;
+}
+
+.layout .menu .menu-name {
+    font-size: 18px;
+}
+
+.layout .menu .menu-desc {
+    color: #8A8078;
+    font-size: 16px;
+    margin-bottom: 10px
+}
+
+/* Access */
+#access {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    padding: 96px 40px;
+}
+
+#access .access-info .access-en {
+    font-size: 30px;
+    color: #8A8078;
+    margin-bottom: 10px;
+}
+
+#access .access-info .access-title {
+    color: #2A2118;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+#access .access-info .access-title::after {
+    content: '';
+    width: 90px;
+    height: 2px;
+    background-color: #C49A6C;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 14px 0;
+    color: #2A2118;
+    border-bottom: 1px solid #E2D9CE;
+    vertical-align: top;
+}
+
+td:first-child {
+    width: 96px;
+    letter-spacing: 0.1em;
+}
+
+/* 右側：マップ */
+.map {
+    flex: 1;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 320px;
+    display: block;
+    border: none;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #8A8078;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SP */
+@media screen and (max-width: 767px) {
+    #header .logo {
+        font-size: 25px;
+    }
+
+    #header .nav { 
+        display: none;
+    }
+
+    #about {
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+
+    #about .detail {
+        padding-left: 0;
+    }
+
+    .mainvisual {
+        margin-bottom: 30px;
+    }
+
+    #about .detail .about-en {
+        font-size: 20px;
+    }
+
+    #about .detail .about-title {
+        font-size: 25px;
+    }
+
+    #about .detail .about-description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* menu */
+    #menu {
+        padding-top: 50px;
+    }
+
+    .layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #menu .menu-en {
+        font-size: 20px;
+    }
+
+    #menu .menu-title {
+        font-size: 25px;
+    }
+
+    /* access */
+    #access {
+        flex-direction: column;
+        gap: 32px;
+        padding: 64px 24px;
+    }
+
+    #access .access-info .access-en{
+        font-size: 20px;
+    }
+
+    #access .access-info .access-title{
+        font-size: 25px;
+    }
+
+    /* ハンバーガーメニュー */
+    #header .hamburger{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        position: fixed;
+        top: 5px;
+        right: 10px;
+        z-index: 30;
+    }
+    #header .hamburger span{
+        width: 30px;
+        height: 2px;
+        background-color: #8A8078;
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        transition: all 0.4s;
+    }
+    #header .hamburger span:nth-of-type(1){
+        top: 16px;
+    }
+    #header .hamburger span:nth-of-type(2){
+        top: 25px;
+    }
+    #header .hamburger span:nth-of-type(3){
+        top: 34px;
+    }
+    /* ボタンを押した際に表示されるメニュー */
+    #header .navi{
+        width: 80%;
+        height: 100vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: -80%;
+        z-index: 20;
+        transition: all 0.6s;
+    } 
+    #header .navi .menu{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        padding: 60px 0;
+        overflow: auto;
+    }
+    #header .navi .menu li{
+        padding: 10px 0;
+        margin-left: 0;
+    }
+    /* ボタンを押した際の動作 */
+    #header .navi.active{
+        right: 0;
+    }
+    #header .hamburger.active span:nth-of-type(1){
+        top: 24px;
+        transform: rotate(-45deg);
+    }
+    #header .hamburger.active span:nth-of-type(2){
+        opacity: 0;
+    }
+    #header .hamburger.active span:nth-of-type(3){
+        top: 24px;
+        transform: rotate(45deg);
+    }
+}
+
+@media screen and (max-width: 425px){
+    .layout{
+        grid-template-columns: 1fr;
+    } 
+}
